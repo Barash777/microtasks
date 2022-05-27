@@ -1,37 +1,90 @@
-import React from 'react';
+import React, {MouseEvent, MouseEventHandler, useState} from 'react';
 import './App.css';
-import Header from './site/Header';
-import {Body} from './site/Body';
-import {Footer} from './site/Footer';
-import {NewComponent, NewComponentForCars} from './components/NewComponent';
+import {Button} from './components/Button';
+import {log} from 'util';
 
 function App() {
 
-    const students = [
-        {id: 1, name: 'James', age: 8},
-        {id: 2, name: 'Robert', age: 18},
-        {id: 3, name: 'John', age: 28},
-        {id: 4, name: 'Michael', age: 38},
-        {id: 5, name: 'William', age: 48},
-        {id: 6, name: 'David', age: 58},
-        {id: 7, name: 'Richard', age: 68},
-        {id: 8, name: 'Joseph', age: 78},
-        {id: 9, name: 'Thomas', age: 88},
-        {id: 10, name: 'Charles', age: 98},
-        {id: 11, name: 'Christopher', age: 100},
+    /*
+    const mySubscriber1 = (event: MouseEvent<HTMLButtonElement>) => {
+        console.log("My name is Anna!")
+    }
+
+    const mySubscriber2 = () => {
+        console.log("My name is Tom!")
+    }
+    */
+
+    // const onClickHandler = (name: string) => {
+    //     console.log(name);
+    // }
+
+    /*const foo1 = () => {
+        console.log('just foo1')
+    }
+
+    const foo2 = (value: number) => {
+        console.log('foo2, value = ', value)
+    }*/
+
+    const ButtonFunction1 = (subscriber: string, age: number = 25) => {
+        console.log(subscriber, age)
+    }
+
+    const ButtonFunction2 = (subscriber: string) => {
+        console.log(subscriber)
+    }
+
+    const ButtonFunction3 = () => {
+        console.log('I\'m stupid button')
+    }
+
+
+    type moneyType = {
+        banknots: string
+        value: number
+        number: string
+    }
+
+    const money: Array<moneyType> = [
+        { banknots: 'Dollars', value: 100, number: ' a1234567890' },
+        { banknots: 'Dollars', value: 50, number: ' z1234567890' },
+        { banknots: 'RUBLS', value: 100, number: ' w1234567890' },
+        { banknots: 'Dollars', value: 100, number: ' e1234567890' },
+        { banknots: 'Dollars', value: 50, number: ' c1234567890' },
+        { banknots: 'RUBLS', value: 100, number: ' r1234567890' },
+        { banknots: 'Dollars', value: 50, number: ' x1234567890' },
+        { banknots: 'RUBLS', value: 50, number: ' v1234567890' },
     ]
 
-    const topCars = [
-        {manufacturer:'BMW', model:'m5cs'},
-        {manufacturer:'Mercedes', model:'e63s'},
-        {manufacturer:'Audi', model:'rs6'}
-    ]
+    const getMoney = (currency: string) => {
+        money.map(obj => {
+            if (currency === obj.banknots)
+                console.log(obj)
+            else if (currency !== "Dollars" && currency !== 'RUBLS')
+                console.log(obj)
+        })
+    }
 
 
     return (
         <div className="App">
-            <NewComponent students={students}/>
-            <NewComponentForCars cars={topCars}/>
+
+            <Button name={'Channel-1'} callBack={() => ButtonFunction1('Vasya', 21)}/>
+            <Button name={'Channel-2'} callBack={() => ButtonFunction2('Ivan')}/>
+            <Button name={'Channel-3'} callBack={ButtonFunction3}/>
+
+            <hr />
+
+            <Button name={'All money'} callBack={() => getMoney("All money")} />
+            <Button name={'Dollars'} callBack={() => getMoney("Dollars")} />
+            <Button name={'RUBLS'} callBack={() => getMoney("RUBLS")} />
+
+            {/*<button onClick={() => onClickHandler('Tom')}>Channel-1</button>
+            <button onClick={() => onClickHandler('Anna')}>Channel-2</button>*/}
+
+            {/*<button onClick={foo1}>1</button>
+            <button onClick={() => foo2(23)}>2</button>*/}
         </div>
     );
 }
