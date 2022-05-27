@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3054b68-7083-4cbb-b624-39afb67f8497" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/site/Body.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/site/Footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/site/Header.tsx" afterDir="false" />
+    <list default="true" id="a3054b68-7083-4cbb-b624-39afb67f8497" name="Changes" comment="nested components">
+      <change afterPath="$PROJECT_DIR$/src/components/NewComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
@@ -39,6 +37,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/sergej/IT-Kamasutra/microtasks/src/site",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
     "ts.external.directory.path": "/Users/sergej/IT-Kamasutra/microtasks/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -56,8 +55,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653646935654</updated>
-      <workItem from="1653646936880" duration="2070000" />
+      <workItem from="1653646936880" duration="4862000" />
     </task>
+    <task id="LOCAL-00001" summary="nested components">
+      <created>1653650898597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653650898597</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,5 +80,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nested components" />
+    <option name="LAST_COMMIT_MESSAGE" value="nested components" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
