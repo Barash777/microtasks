@@ -1,51 +1,58 @@
 import React, {useState} from 'react';
 import './App.css';
-import {FilterMoney} from './components/FilterMoney';
-
-type FilterType = 'all' | 'ruble' | 'dollar'
+import {FullInput} from './components/FullInput';
+import {Input} from './components/Input';
+import {ButtonForInput} from './components/ButtonForInput';
 
 function App() {
 
-    const [money, setMoney] = useState([
-        {banknots: 'dollar', value: 100, number: ' a1234567890'},
-        {banknots: 'dollar', value: 50, number: ' z1234567890'},
-        {banknots: 'ruble', value: 100, number: ' w1234567890'},
-        {banknots: 'dollar', value: 100, number: ' e1234567890'},
-        {banknots: 'dollar', value: 50, number: ' c1234567890'},
-        {banknots: 'ruble', value: 100, number: ' r1234567890'},
-        {banknots: 'dollar', value: 50, number: ' x1234567890'},
-        {banknots: 'ruble', value: 50, number: ' v1234567890'},
-    ])
+    const [message, setMessage] = useState([
+            {message: 'message1'},
+            {message: 'message2'},
+            {message: 'message3'},
+            {message: 'message4'},
+            {message: 'message5'}
+        ]
+    )
 
-    // let filter: FilterType
-    let [filter, setFilter] = useState('all')
+    let [title, setTitle] = useState('')
 
-    // let currentMoney = money.filter(oneBanknote => oneBanknote);
-    let currentMoney = money;
 
-    if (filter === 'dollar') {
-        currentMoney = money.filter(oneBanknote => {
-            if (oneBanknote.banknots === 'dollar')
-                return oneBanknote
-        })
-    }
-    if (filter === 'ruble') {
-        currentMoney = money.filter(oneBanknote => {
-            if (oneBanknote.banknots === 'ruble')
-                return oneBanknote
-        })
+    const addMessage = (title: string) => {
+        //message.push({message: title})
+        //setMessage(message)
+        //console.log(message)
+
+        let copyMessage = [...message]
+        copyMessage.unshift({message: title})
+        setMessage(copyMessage)
+        console.log(message)
     }
 
 
-    const onClickFilterHandler = (currency: FilterType) => {
-        // debugger
-        console.log(currency)
-        setFilter(currency)
+    const callBackButtonHandler = () => {
+        addMessage(title)
+        setTitle('')
     }
 
+
+    const renderedMessagesJSX = message.map((el, index) => {
+        return (
+            <div key={index}>
+                {el.message}
+            </div>
+        )
+    })
 
     return (
-        <FilterMoney callBack={onClickFilterHandler} currentMoney={currentMoney}/>
+        <div className={'App'}>
+            {/*<FullInput callBack={addMessage}/>*/}
+
+            <Input setTitle={setTitle} title={title}/>
+            <ButtonForInput name={'+'} callBack={callBackButtonHandler}/>
+
+            {renderedMessagesJSX}
+        </div>
     )
 }
 

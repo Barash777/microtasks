@@ -1,6 +1,6 @@
 import React from 'react';
 
-type FilterType = 'all' | 'ruble' | 'dollar'
+export type FilterType = 'all' | 'ruble' | 'dollar'
 
 type CurrencyType = {
     banknots: string,
