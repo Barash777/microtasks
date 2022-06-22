@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3054b68-7083-4cbb-b624-39afb67f8497" name="Changes" comment="filter with HomeWork">
-      <change afterPath="$PROJECT_DIR$/src/components/ButtonForInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FullInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Input.tsx" afterDir="false" />
+    <list default="true" id="a3054b68-7083-4cbb-b624-39afb67f8497" name="Changes" comment="Input">
+      <change afterPath="$PROJECT_DIR$/src/AppReserve.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Todolist.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilterMoney.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterMoney.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,8 @@
       <updated>1653646935654</updated>
       <workItem from="1653646936880" duration="15390000" />
       <workItem from="1653935778668" duration="597000" />
-      <workItem from="1654021552536" duration="6319000" />
+      <workItem from="1654021552536" duration="6535000" />
+      <workItem from="1655914917418" duration="269000" />
     </task>
     <task id="LOCAL-00001" summary="nested components">
       <created>1653650898597</created>
@@ -122,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653678273477</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Input">
+      <created>1654030255308</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654030255309</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +153,8 @@
     <MESSAGE value="button lesson" />
     <MESSAGE value="useState" />
     <MESSAGE value="filter with HomeWork" />
-    <option name="LAST_COMMIT_MESSAGE" value="filter with HomeWork" />
+    <MESSAGE value="Input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Input" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
